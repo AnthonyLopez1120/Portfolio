@@ -1,20 +1,4 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="anthonybeconscious@gmail.com";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?><!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
@@ -26,7 +10,6 @@ if($_POST["submit"]) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -82,21 +65,15 @@ if($_POST["submit"]) {
 									<dt>Studium Team Lead</dt>
 										<dd>A flashcard app designed to help students test their skills, challenge their friends, and track their progress thru self created, or auto generated flash cards.</dd>
 									<dt>Briceidaflor.com Full-Stack Dev</dt>
-										<dd>A photography portfolio and contact site for baby photography in Guadalajara, Jalisco, MX
-											<li>Created a welcome page
-											</li>
-											<li>Routed from splash-page to the gallery
-												Added direct messaging functionality with WhatsApp, Facebook, and Instagram</li>		
-										</dd>
+										<dd>A photography portfolio and contact site for baby photography in Guadalajara, Jalisco, MX</dd>
 									<dt>Ringless Voicemail Front-End Dev</dt>
-										<dd>A salesforce feature to deliver a prerecorded message directly into a clients voicemail, bypassing any ringing.
-											<li>Built a Twilio flow to respond to an API call to deliver a prerecorded message once it detects a voice mail
-												Added functionality to create, edit, and delete prerecorded voice mails
-												</li>
-											<li>Integrated the Twilio flow into a Salesforce site to allow a database of phone numbers to be used to initiate calling
-												</li>
-										</dd>
-										
+										<dd>A salesforce feature to deliver a prerecorded message directly into a clients voicemail, bypassing any ringing.</dd>
+										<li>Built a Twilio flow to respond to an API call to deliver a prerecorded message once it detects a voice mail
+										</li>
+										<li>
+											Added functionality to create, edit, and delete prerecorded voice mails
+
+											</li>
 								  </dl>
 							</article>
 
@@ -110,7 +87,7 @@ if($_POST["submit"]) {
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="emailpush.php">
+								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -125,8 +102,8 @@ if($_POST["submit"]) {
 											<textarea name="message" id="message" rows="4"></textarea>
 										</div>
 									</div>
-									<ul>
-										<li><input type="submit" value="submit"/></li>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
