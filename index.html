@@ -1,25 +1,4 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="anthonybeconscious@gmail.com";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?><!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Anthony Lopez || Full-Stack Web Developer</title>
@@ -50,7 +29,6 @@ if($_POST["submit"]) {
 								<li><a href="#work">Work</a></li>
 								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
 							</ul>
 						</nav>
 					</header>
@@ -107,14 +85,13 @@ if($_POST["submit"]) {
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/Headshot@0.5x.jpg" alt="" /></span>
+								<span class="image main"><img src="images/Headshot.jpg" alt="" /></span>
 								<p>Born and raised in Phoenix, AZ, the valley of the sun had a major impact in my life. The ability to not only survive, but also thrive in the extreme climate of the desert has always been a source of inspiration to keep on pushing myself in life to adapt and grow wherever I find myself.</p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<?=$thankYou ?>
 								<form method="post" action="contact.php">
 									<div class="fields">
 										<div class="field half">
